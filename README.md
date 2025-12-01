@@ -44,3 +44,11 @@ STATUS: Nov 27, 2025
 * Looking for: As few markup features as possible and no fewer, nice layout, ease of deployment of system on client platforms.
 * Long term goal: Support minimum amount of markdown on the github repo that can eventually be imported into a CLOG based wiki (already under development).
 * Still need to do a bit of testing against Retext and other options.
+
+STATUS: Dec 01, 2025
+* Mkdocs + Material is probably the best choice.
+* Right now "mkdoc sever" has a bug that does not allow for a served document to be automatically updated, this will cause anyone wanting to help great frustration
+* The issue is with the latest "click" package that pip installs, as per: https://github.com/squidfunk/mkdocs-material/issues/8478
+* The temp workaround is "mkdocs serve --livereload"
+* This should be fixed soon. Setting up initial doc structure for testing locally now. Looking to make it look nice by default so users can just add docs just by adding some markdown.
+
