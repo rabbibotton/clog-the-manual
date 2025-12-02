@@ -55,5 +55,5 @@ STATUS: Dec 01, 2025
 STATUS: Dec 01, 2025
 * Frist mockup MkDocs markdown collection of pages for look and feel testing is done.
 * First MKDOCS --> GITHUB REPO --> GITHUB ACTIONS --> GITHUB PAGES automated deployment tested successfully.
-* Conclusion: Users can write documentation using MkDocs tooling or using Githubs web interface. On commit to main branch an action is run and public website is automatically updated on Github Pages. We will need a set of tutorials dedicated just to the use of MkDocs based workflows on different platforms, in addition to all of the tutorials for Clog.
+* Conclusion: Users can write documentation using MkDocs tooling or using Githubs web interface. On commit to main branch an action is run and public website is automatically updated on Github Pages. Hosting the documentation on Github Pages is the simplest possible solution and it supports custom domains so if Rabbi Botton would like to setup https://docs.clogpower.com, we can get nice integration. We will need a set of tutorials dedicated just to the use of MkDocs based workflows on different platforms, in addition to all of the tutorials for Clog.
 * Next Steps: Iterate through a few more test layouts, colour schemes etc, mockup a demo of the documenation for Rabbit Botton to approve before we begin the first set of tutorials.
