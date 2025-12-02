@@ -52,3 +52,8 @@ STATUS: Dec 01, 2025
 * The temp workaround is "mkdocs serve --livereload"
 * This should be fixed soon. Setting up initial doc structure for testing locally now. Looking to make it look nice by default so users can just add docs just by adding some markdown.
 
+STATUS: Dec 01, 2025
+* Frist mockup MkDocs markdown collection of pages for look and feel testing is done.
+* First MKDOCS --> GITHUB REPO --> GITHUB ACTIONS --> GITHUB PAGES automated deployment tested successfully.
+* Conclusion: Users can write documentation using MkDocs tooling or using Githubs web interface. On commit to main branch an action is run and public website is automatically updated on Github Pages. We will need a set of tutorials dedicated just to the use of MkDocs based workflows on different platforms, in addition to all of the tutorials for Clog.
+* Next Steps: Iterate through a few more test layouts, colour schemes etc, mockup a demo of the documenation for Rabbit Botton to approve before we begin the first set of tutorials.
