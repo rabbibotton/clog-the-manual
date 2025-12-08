@@ -61,3 +61,12 @@ STATUS: Dec 01, 2025
 STATUS: Dec 07, 2025
 * Creating the first tutorial to test out markdown presentation capabilities.
 * If this looks good, we will present documentation (with sample content only!) shortly.
+
+STATUS: Dec 08, 2025
+* I have uploaded a test repo for review: https://github.com/aykaramba/test4
+* It publishes the site after each commit using Github actions here: https://aykaramba.github.io/test4/
+* Created a cheat sheet for MkDocs + Material to demo the system, you can see it here: https://aykaramba.github.io/test4/doc-cheat-sheet/
+* All other sections are place holders.
+* Special features: relatively easy to use, minimal markup with maximum power, Github compatible, Github actions compatible.
+* Next steps: fix up the theme colors to be CLOG official brand colors, have a conversation with Rabbi Botton about any changes or preferences he wants to see applied, then start building out the first Clog tutorial.
+* Rabbi, please take a look and give me your initial thoughts.
