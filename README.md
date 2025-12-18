@@ -74,3 +74,7 @@ STATUS: Dec 08, 2025
 STATUS: Dec 12, 2025
 * I am busy this week.
 * I did managed to test Zensical. There will be positive updates over the weekend.
+
+STATUS: Dec 18, 2025
+* Work has slown down, I have an external issue to pay attention to, will resolve shortly.
+* Additional testing was done: Zensical is the superior replacement product but it is too young to have everyone easily collaborate (bug on Windows). MkDocs is compatible with Zensical and we will just use the default Material theme. 
