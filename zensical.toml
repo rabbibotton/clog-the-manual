@@ -1,0 +1,473 @@
+# ============================================================================
+#
+# The configuration produced by default is meant to highlight the features
+# that Zensical provides and to serve as a starting point for your own
+# projects.
+#
+# ============================================================================
+
+[project]
+
+# The site_name is shown in the page header and the browser window title
+#
+# Read more: https://zensical.org/docs/setup/basics/#site_name
+site_name = "CLOG Documentation"
+
+# The site_description is included in the HTML head and should contain a
+# meaningful description of the site content for use by search engines.
+#
+# Read more: https://zensical.org/docs/setup/basics/#site_description
+site_description = "The official documentation of the CLOG framework."
+
+# The site_author attribute. This is used in the HTML head element.
+#
+# Read more: https://zensical.org/docs/setup/basics/#site_author
+site_author = "Robert Taylor, et al."
+
+# The site_url is the canonical URL for your site. When building online
+# documentation you should set this.
+# Read more: https://zensical.org/docs/setup/basics/#site_url
+#site_url = "https://www.example.com/"
+
+# The copyright notice appears in the page footer and can contain an HTML
+# fragment.
+#
+# Read more: https://zensical.org/docs/setup/basics/#copyright
+copyright = """
+Copyright &copy; 2026 David Botton
+"""
+
+# Zensical supports both implicit navigation and explicitly defined navigation.
+# If you decide not to define a navigation here then Zensical will simply
+# derive the navigation structure from the directory structure of your
+# "docs_dir". The definition below demonstrates how a navigation structure
+# can be defined using TOML syntax.
+#
+# Read more: https://zensical.org/docs/setup/navigation/
+# nav = [
+#   { "Get started" = "index.md" },
+#   { "Markdown in 5min" = "markdown.md" },
+# ]
+
+# ----------------------------------------------------------------------------
+# The CLOG Navigation ---> Edit Here
+# ----------------------------------------------------------------------------
+nav = [
+
+  {"Home" = "index.md"},
+
+  {"Manual" = [
+     "manual/index.md",
+     { "Overview" = [
+        { "Technical Overview" = "manual/overview/technical-overview.md" },
+      ]},
+     { "Getting Started" = [
+        { "Setup Common Lisp" = "manual/getting-started/setup-common-lisp.md" },
+        { "Your Dev Environment" = "manual/getting-started/your-dev-environment.md" },
+        { "Tips and Tricks" = "manual/getting-started/trips-and-tricks.md" },
+        { "Package Management" = "manual/getting-started/package-management.md" },
+      ]},
+     { "CLOG App Creation" = [
+        { "Just the Basics" = "manual/clog-app-creation/just-the-basics.md" },
+        { "Use HTML for Layout" = "manual/clog-app-creation/use-html-for-layout.md" },
+        { "Using Panels" = "manual/clog-app-creation/using-panels.md" },
+        { "Using HTML Grid" = "manual/clog-app-creation/using-html-grid.md" },
+        { "Using CSS Effectively" = "manual/clog-app-creation/using-css-effectively.md" },
+        { "Access Control" = "manual/clog-app-creation/access-control.md" },
+        { "Restore Sessions" = "manual/clog-app-creation/restore-sessions.md" },
+      ]},
+     { "CLOG App Delivery" = [
+        { "Traditional Websites" = "manual/clog-app-delivery/traditional-websites.md" },
+        { "Web Applications" = "manual/clog-app-delivery/web-applications.md" },
+        { "Desktop Applications" = "manual/clog-app-delivery/desktop-applications.md" },
+        { "Mobile Applications" = "manual/clog-app-delivery/mobile-applications.md" },
+        { "Embedded Devices" = "manual/clog-app-delivery/embedded-devices.md" },
+      ]},
+     { "JavaScript" = [
+        { "Wrapping a JS Plugin" = "manual/javascript/wrapping-a-js-plugin.md" },
+      ]},
+     { "Security and CLOG" = [
+        { "Security Concepts" = "manual/security-and-clog/security-concepts.md" },
+      ]},
+     { "Reference Manual" = [
+        { "CLOG Reference Manual" = "manual/clog-reference-manual/clog-reference-manual.md" },
+      ]},
+  ]},
+
+  {"Tutorials" = [
+     "tutorials/index.md",
+     { "Common Lisp Tutorials" = [
+	{ "Introduction" = "tutorials/common-lisp-tutorials/introduction.md" },
+	{ "01 The Journey" = "tutorials/common-lisp-tutorials/01-the-journey.md" },
+	{ "02 Symbols " = "tutorials/common-lisp-tutorials/02-not-in-kansas-anymore-symbols.md" },
+	{ "03 Packages and Systems" = "tutorials/common-lisp-tutorials/03-evolution-packages-and-systems.md" },
+	{ "04 Functions" = "tutorials/common-lisp-tutorials/04-inconceivable-functions.md" },
+	{ "05 Control " = "tutorials/common-lisp-tutorials/05-lisp-loves-donuts-control.md" },
+	{ "06 Globals and Lists" = "tutorials/common-lisp-tutorials/06-wax-on-wax-off-globals-and-lists.md" },
+	{ "07 Closures, Loops and Strings" = "tutorials/common-lisp-tutorials/07-spin-me-right-round-closures-loops-and-strings.md" },
+	{ "08 Arrays" = "tutorials/common-lisp-tutorials/08-only-a-mom-could-love-format-and-loop.md" },
+	{ "09 Format and Loop" = "tutorials/common-lisp-tutorials/09-i-want-a-new-drug-hash-and-arrays.md" },
+	{ "10 Mapping functions" = "tutorials/common-lisp-tutorials/10-following-mapping-functions.md" },
+	{ "11 Structs and CLOS" = "tutorials/common-lisp-tutorials/11-build-me-up-structs-and-clos.md" },
+	{ "12 Macros " = "tutorials/common-lisp-tutorials/12-expand-your-mind-macros.md" },
+	{ "13 Exceptions/Conditions" = "tutorials/common-lisp-tutorials/13-yall-come-back-now-exceptions-conditions.md" },
+	{ "14 Concurrency and Parallelism" = "tutorials/common-lisp-tutorials/14-kindergarten-concurrent-and-parallel-programing.md" },
+	{ "15 A Real GUI App" = "tutorials/common-lisp-tutorials/15-pulling-it-all-togeher-With-a-real-gui-app-clos-encounters-game.md" },
+	]},
+     { "CLOG Video Series" = [
+	{ "Introduction" = "tutorials/clog-video-series/introduction.md" },
+	{ "CLOG Builder" = "tutorials/clog-video-series/clog-builder-master-classes.md" },
+	{ "CLOG Create a pro-app" = "tutorials/clog-video-series/clog-plunger-video-series-use-clog-builder-to-create-a-pro-app.md" },
+	{ "CLOG Tips" = "tutorials/clog-video-series/clog-extra-learn-tips-on-using-clog.md" },
+	{ "Common Lisp The Language 2ed Book Course" = "tutorials/clog-video-series/common-lisp-the-language-2ed-book-course.md" },
+	]},
+     { "CLOG Builder Tutorials (Reddit links)" = [
+	{ "Introduction" = "tutorials/clog-builder-tutorials/introduction.md" },
+	{ "01 - Chat App" = "tutorials/clog-builder-tutorials/01-chat-app.md" },                                                    
+	{ "02 - Building a Web Page" = "tutorials/clog-builder-tutorials/02-building-a-web-page.md" },
+	{ "03 - Importing HTML" = "tutorials/clog-builder-tutorials/03-importing-html-in-to-builder.md" },
+	{ "04 - CLOS Contact App" = "tutorials/clog-builder-tutorials/04-clos-contact-database-controls-a-complete-application.md" },
+	{ "05 - Using Controls" = "tutorials/clog-builder-tutorials/05-using-and-creating-controls.md" },
+	]},
+  ]},
+
+  {"Examples and Demos" = [
+     "examples-and-demos/index.md",
+     { "CLOG Demos" = [
+	{ "Introduction" = "examples-and-demos/clog-demos/introduction.md" },
+	{ "01-demo.lisp" = "examples-and-demos/clog-demos/01-demo.lisp-sparkey-the-snake-game.md" },
+	{ "02-demo.lisp" = "examples-and-demos/clog-demos/02-demo.lisp-chat-private-instant-messenger.md" },
+	{ "03-demo.lisp" = "examples-and-demos/clog-demos/03-demo.lisp-ide-a-very-simple-common-lisp-ide.md" },
+	{ "04-demo.lisp" = "examples-and-demos/clog-demos/04-demo.lisp-cms-website-a-very-simple-database-driven-website.md" },
+	{ "05-clos-encounters" = "examples-and-demos/clog-demos/05-clos-encounters-full-project-game.md" },
+	{ "06-clos-contact" = "examples-and-demos/clog-demos/06-clos-contact-full-project-business-app.md" },
+	]},
+     { "CLOG Code Examples" = [
+	{ "Introduction" = "examples-and-demos/clog-code-examples/introduction.md" },
+	{ "01 Tutorial" = "examples-and-demos/clog-code-examples/01-tutorial.md" },
+	{ "02 Tutorial" = "examples-and-demos/clog-code-examples/02-tutorial.md" },
+	{ "03 Tutorial" = "examples-and-demos/clog-code-examples/03-tutorial.md" },
+	{ "04 Tutorial" = "examples-and-demos/clog-code-examples/04-tutorial.md" },
+	{ "05 Tutorial" = "examples-and-demos/clog-code-examples/05-tutorial.md" },
+	{ "06 Tutorial" = "examples-and-demos/clog-code-examples/06-tutorial.md" },
+	{ "07 Tutorial" = "examples-and-demos/clog-code-examples/07-tutorial.md" },
+	{ "08 Tutorial" = "examples-and-demos/clog-code-examples/08-tutorial.md" },
+	{ "09 Tutorial" = "examples-and-demos/clog-code-examples/09-tutorial.md" },
+	{ "10 Tutorial" = "examples-and-demos/clog-code-examples/10-tutorial.md" },
+	{ "11 Tutorial" = "examples-and-demos/clog-code-examples/11-tutorial.md" },
+	{ "12 Tutorial" = "examples-and-demos/clog-code-examples/12-tutorial.md" },
+	{ "13 Tutorial" = "examples-and-demos/clog-code-examples/13-tutorial.md" },
+	{ "14 Tutorial" = "examples-and-demos/clog-code-examples/14-tutorial.md" },
+	{ "15 Tutorial" = "examples-and-demos/clog-code-examples/15-tutorial.md" },
+	{ "16 Tutorial" = "examples-and-demos/clog-code-examples/16-tutorial.md" },
+	{ "17 Tutorial" = "examples-and-demos/clog-code-examples/17-tutorial.md" },
+	{ "18 Tutorial" = "examples-and-demos/clog-code-examples/18-tutorial.md" },
+	{ "19 Tutorial" = "examples-and-demos/clog-code-examples/19-tutorial.md" },
+	{ "20 Tutorial" = "examples-and-demos/clog-code-examples/20-tutorial.md" },
+	{ "21 Tutorial" = "examples-and-demos/clog-code-examples/21-tutorial.md" },
+	{ "22 Tutorial" = "examples-and-demos/clog-code-examples/22-tutorial.md" },
+	{ "23 Tutorial" = "examples-and-demos/clog-code-examples/23-tutorial.md" },
+	{ "24 Tutorial" = "examples-and-demos/clog-code-examples/24-tutorial.md" },
+	{ "25 Tutorial" = "examples-and-demos/clog-code-examples/25-tutorial.md" },
+	{ "26 Tutorial" = "examples-and-demos/clog-code-examples/26-tutorial.md" },
+	{ "27 Tutorial" = "examples-and-demos/clog-code-examples/27-tutorial.md" },
+	{ "28 Tutorial" = "examples-and-demos/clog-code-examples/28-tutorial.md" },
+	{ "29 Tutorial" = "examples-and-demos/clog-code-examples/29-tutorial.md" },
+	{ "30 Tutorial" = "examples-and-demos/clog-code-examples/30-tutorial.md" },
+	{ "31 Tutorial" = "examples-and-demos/clog-code-examples/31-tutorial.md" },
+	{ "32 Tutorial" = "examples-and-demos/clog-code-examples/32-tutorial.md" },
+	{ "33 Tutorial" = "examples-and-demos/clog-code-examples/33-tutorial.md" },
+	{ "34 Tutorial" = "examples-and-demos/clog-code-examples/34-tutorial.md" },
+	{ "35 Tutorial" = "examples-and-demos/clog-code-examples/35-tutorial.md" },
+	]},
+     { "Apps Built by the Community" = [
+     	{ "Example Apps" = "examples-and-demos/apps-built-by-the-community/example-apps.md" },
+	]},
+  ]},
+
+  {"Roadmap" = [
+     { "Roadmap" = "roadmap/index.md" },
+  ]},
+
+  {"Resources" = [
+     "resources/index.md",
+     { "Issues" = [
+	{ "Tickets and Forums" = "resources/issues/tickets-and-forums.md" },
+	]},
+     { "Documentation Project" = [
+	{ "Overview" = "resources/documentation-project/overview.md" },
+	{ "Markdown Examples" = "resources/documentation-project/markdown-examples.md"},
+	{ "Markdown in 5min" = "resources/documentation-project/markdown-in-5min.md" },	
+	{ "Setup Zensical" = "resources/documentation-project/setup-zensical.md" },	
+	{ "Zensical Manual" = "resources/documentation-project/zensical-manual.md" },	
+	]},
+     { "Other Resources" = [
+	{ "External Resources" = "resources/other-resources/external-resources.md" },
+	{ "From Reddit" = "resources/other-resources/from-reddit.md" },
+	]},
+     ]},
+
+]
+
+
+
+# With the "extra_css" option you can add your own CSS styling to customize
+# your Zensical project according to your needs. You can add any number of
+# CSS files.
+#
+# The path provided should be relative to the "docs_dir".
+#
+# Read more: https://zensical.org/docs/customization/#additional-css
+#
+#extra_css = ["stylesheets/extra.css"]
+
+# With the `extra_javascript` option you can add your own JavaScript to your
+# project to customize the behavior according to your needs.
+#
+# The path provided should be relative to the "docs_dir".
+#
+# Read more: https://zensical.org/docs/customization/#additional-javascript
+#extra_javascript = ["javascripts/extra.js"]
+
+# ----------------------------------------------------------------------------
+# Section for configuring theme options
+# ----------------------------------------------------------------------------
+[project.theme]
+
+# change this to "classic" to use the traditional Material for MkDocs look.
+#variant = "classic"
+
+# Zensical allows you to override specific blocks, partials, or whole
+# templates as well as to define your own templates. To do this, uncomment
+# the custom_dir setting below and set it to a directory in which you
+# keep your template overrides.
+#
+# Read more:
+# - https://zensical.org/docs/customization/#extending-the-theme
+#
+#custom_dir = "overrides"
+
+
+# With the "favicon" option you can set your own image to use as the icon
+# browsers will use in the browser title bar or tab bar. The path provided
+# must be relative to the "docs_dir".
+#
+# Read more:
+# - https://zensical.org/docs/setup/logo-and-icons/#favicon
+# - https://developer.mozilla.org/en-US/docs/Glossary/Favicon
+#
+favicon = "assets/images/favicon/favicon-32x32.png"
+
+# Site logo (location: header)
+logo = "assets/images/logo.png"
+
+# Zensical supports more than 60 different languages. This means that the
+# labels and tooltips that Zensical's templates produce are translated.
+# The "language" option allows you to set the language used. This language
+# is also indicated in the HTML head element to help with accessibility
+# and guide search engines and translation tools.
+#
+# The default language is "en" (English). It is possible to create
+# sites with multiple languages and configure a language selector. See
+# the documentation for details.
+#
+# Read more:
+# - https://zensical.org/docs/setup/language/
+#
+language = "en"
+
+# Zensical provides a number of feature toggles that change the behavior
+# of the documentation site.
+features = [
+    # Zensical includes an announcement bar. This feature allows users to
+    # dismiss it when they have read the announcement.
+    # https://zensical.org/docs/setup/header/#announcement-bar
+    "announce.dismiss",
+
+    # If you have a repository configured and turn on this feature, Zensical
+    # will generate an edit button for the page. This works for common
+    # repository hosting services.
+    # https://zensical.org/docs/setup/repository/#content-actions
+    #"content.action.edit",
+
+    # If you have a repository configured and turn on this feature, Zensical
+    # will generate a button that allows the user to view the Markdown
+    # code for the current page.
+    # https://zensical.org/docs/setup/repository/#content-actions
+    #"content.action.view",
+
+    # Code annotations allow you to add an icon with a tooltip to your
+    # code blocks to provide explanations at crucial points.
+    # https://zensical.org/docs/authoring/code-blocks/#code-annotations
+    "content.code.annotate",
+
+    # This feature turns on a button in code blocks that allow users to
+    # copy the content to their clipboard without first selecting it.
+    # https://zensical.org/docs/authoring/code-blocks/#code-copy-button
+    "content.code.copy",
+
+    # Code blocks can include a button to allow for the selection of line
+    # ranges by the user.
+    # https://zensical.org/docs/authoring/code-blocks/#code-selection-button
+    "content.code.select",
+
+    # Zensical can render footnotes as inline tooltips, so the user can read
+    # the footnote without leaving the context of the document.
+    # https://zensical.org/docs/authoring/footnotes/#footnote-tooltips
+    "content.footnote.tooltips",
+
+    # If you have many content tabs that have the same titles (e.g., "Python",
+    # "JavaScript", "Cobol"), this feature causes all of them to switch to
+    # at the same time when the user chooses their language in one.
+    # https://zensical.org/docs/authoring/content-tabs/#linked-content-tabs
+    "content.tabs.link",
+
+    # With this feature enabled users can add tooltips to links that will be
+    # displayed when the mouse pointer hovers the link.
+    # https://zensical.org/docs/authoring/tooltips/#improved-tooltips
+    "content.tooltips",
+
+    # With this feature enabled, Zensical will automatically hide parts
+    # of the header when the user scrolls past a certain point.
+    # https://zensical.org/docs/setup/header/#automatic-hiding
+    # "header.autohide",
+
+    # Turn on this feature to expand all collapsible sections in the
+    # navigation sidebar by default.
+    # https://zensical.org/docs/setup/navigation/#navigation-expansion
+    #"navigation.expand",
+
+    # This feature turns on navigation elements in the footer that allow the
+    # user to navigate to a next or previous page.
+    # https://zensical.org/docs/setup/footer/#navigation
+    "navigation.footer",
+
+    # When section index pages are enabled, documents can be directly attached
+    # to sections, which is particularly useful for providing overview pages.
+    # https://zensical.org/docs/setup/navigation/#section-index-pages
+    "navigation.indexes",
+
+    # When instant navigation is enabled, clicks on all internal links will be
+    # intercepted and dispatched via XHR without fully reloading the page.
+    # https://zensical.org/docs/setup/navigation/#instant-navigation
+    "navigation.instant",
+
+    # With instant prefetching, your site will start to fetch a page once the
+    # user hovers over a link. This will reduce the perceived loading time
+    # for the user.
+    # https://zensical.org/docs/setup/navigation/#instant-prefetching
+    "navigation.instant.prefetch",
+
+    # In order to provide a better user experience on slow connections when
+    # using instant navigation, a progress indicator can be enabled.
+    # https://zensical.org/docs/setup/navigation/#progress-indicator
+    #"navigation.instant.progress",
+
+    # When navigation paths are activated, a breadcrumb navigation is rendered
+    # above the title of each page
+    # https://zensical.org/docs/setup/navigation/#navigation-path
+    "navigation.path",
+
+    # When pruning is enabled, only the visible navigation items are included
+    # in the rendered HTML, reducing the size of the built site by 33% or more.
+    # https://zensical.org/docs/setup/navigation/#navigation-pruning
+    #"navigation.prune",
+
+    # When sections are enabled, top-level sections are rendered as groups in
+    # the sidebar for viewports above 1220px, but remain as-is on mobile.
+    # https://zensical.org/docs/setup/navigation/#navigation-sections
+    "navigation.sections",
+
+    # When tabs are enabled, top-level sections are rendered in a menu layer
+    # below the header for viewports above 1220px, but remain as-is on mobile.
+    # https://zensical.org/docs/setup/navigation/#navigation-tabs
+    "navigation.tabs",
+
+    # When sticky tabs are enabled, navigation tabs will lock below the header
+    # and always remain visible when scrolling down.
+    # https://zensical.org/docs/setup/navigation/#sticky-navigation-tabs
+    "navigation.tabs.sticky",
+
+    # A back-to-top button can be shown when the user, after scrolling down,
+    # starts to scroll up again.
+    # https://zensical.org/docs/setup/navigation/#back-to-top-button
+    "navigation.top",
+
+    # When anchor tracking is enabled, the URL in the address bar is
+    # automatically updated with the active anchor as highlighted in the table
+    # of contents.
+    # https://zensical.org/docs/setup/navigation/#anchor-tracking
+    "navigation.tracking",
+
+    # When search highlighting is enabled and a user clicks on a search result,
+    # Zensical will highlight all occurrences after following the link.
+    # https://zensical.org/docs/setup/search/#search-highlighting
+    "search.highlight",
+
+    # When anchor following for the table of contents is enabled, the sidebar
+    # is automatically scrolled so that the active anchor is always visible.
+    # https://zensical.org/docs/setup/navigation/#anchor-following
+    # "toc.follow",
+
+    # When navigation integration for the table of contents is enabled, it is
+    # always rendered as part of the navigation sidebar on the left.
+    # https://zensical.org/docs/setup/navigation/#navigation-integration
+    #"toc.integrate",
+]
+
+# ----------------------------------------------------------------------------
+# In the "palette" subsection you can configure options for the color scheme.
+# You can configure different color # schemes, e.g., to turn on dark mode,
+# that the user can switch between. Each color scheme can be further
+# customized.
+#
+# Read more:
+# - https://zensical.org/docs/setup/colors/
+# ----------------------------------------------------------------------------
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+# ----------------------------------------------------------------------------
+# In the "font" subsection you can configure the fonts used. By default, fonts
+# are loaded from Google Fonts, giving you a wide range of choices from a set
+# of suitably licensed fonts. There are options for a normal text font and for
+# a monospaced font used in code blocks.
+# ----------------------------------------------------------------------------
+#[project.theme.font]
+#text = "Inter"
+#code = "Jetbrains Mono"
+
+# ----------------------------------------------------------------------------
+# You can configure your own logo to be shown in the header using the "logo"
+# option in the "icons" subsection. The logo can be a path to a file in your
+# "docs_dir" or it can be a path to an icon.
+#
+# Likewise, you can customize the logo used for the repository section of the
+# header. Zensical derives the default logo for this from the repository URL.
+# See below...
+#
+# There are other icons you can customize. See the documentation for details.
+#
+# Read more:
+# - https://zensical.org/docs/setup/logo-and-icons
+# - https://zensical.org/docs/authoring/icons-emojis/#search
+# ----------------------------------------------------------------------------
+# [project.theme.icon]
+#logo = "lucide/smile"
+#repo = "lucide/smile"
+
+# ----------------------------------------------------------------------------
+# The "extra" section contains miscellaneous settings.
+# ----------------------------------------------------------------------------
+#[[project.extra.social]]
+#icon = "fontawesome/brands/github"
+#link = "https://github.com/user/repo"
+
+

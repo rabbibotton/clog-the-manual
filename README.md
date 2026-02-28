@@ -1,94 +1,82 @@
-# clog-the-manual
-CLOG The Manual - a user manual for creating applications with CLOG
 
-We need a solid user manual:
+# Test documentation system for the Common Lisp Omnificent GUI
 
-- Getting Started
+This an initial test environment of the CLOG documentation project. The purpose of this repo is to test out the documentation solution and workflow that might work best for the ongoing support and development of the CLOG project. The solution is mostly filled with placeholder documents, however, the look/feel and behaviour of the implementation is ready for your review and consideration.
 
-1. Getting started with common Lisp (Loading sbcl on local machine, mobile or servers)
-1. Setting up a dev environment using emacs or the builder (which allows for your work flow on a server)
-1. Pointers to getting started quick with CL and CLOG
-1. Package management OCICL and QuickLisp
+## Testing of available solutions and conclusion.
 
-- CLOG Application Creation
+I tested out a number of documentation technologies and tried to pick one that:
 
-1. Basics - create-* patterns, properties and events
-1. Using html to do layout and binding controls by id
-1. Using panels - creating manually and with the builder, using panels as templates
-1. Using html grides to layout panels
-1. Using CSS affectively
-1. Access control
-1. Restoring sessions
+- Minimizes the required markup labour and knowledge.
+- Maximizes presentation features and layout styling with the simplest technology possible.
+- It has to be something that the community can live with on a long term basis, it cannot have too many annoying edge cases or weird behaviours.
+- The technology has to be easy to install, operate and maintain locally for any ongoing contributors.
 
-- CLOG Application Delivery
+This documentation project uses the Zensical documentation software (https://zensical.org/). It strikes the most ergonomic balance between technology, ease of use and aesthetics for us.
 
-1. Traditional Websites
-1. Web application
-1. Desktop applications
-1. Mobile applications
-1. Embedded devices
+## What this is not.
 
-- Security and CLOG
+This is just a testing environment to gather feedback and give us a chance for tweaks and adjustments.  When Rabbi Botton approves this, I will push this to the official repo and we can continue building the documentation in the official repo.
 
-Net security in general
-Application security
-https
+## Where is documentation located, how do I see it?
+
+The repo is here (obviously): https://github.com/aykaramba/test01
+
+The documentation website is here: https://aykaramba.github.io/test01/
+
+The repo automatically generates the Github pages using a Github action.
+
+## What are the plans for the documentation project:
+
+I looked at various options, but for starters, the easiest solution is as follows:
+
+- Use Zensical to manage and generate the documentation.
+- Use Github for the repo (obviously).
+- Use Github Pages to host the official documentation.  
+
+Here is how it works: 
+
+- I have a local Zensical instance to manage the documentation (easy to setup). 
+- I create the documentation locally and push to the Gihub repo. 
+- Github  has an action that automatically generates the Github pages documenation. The action is triggered when documentation is pushed to the repo.
+
+This is probably the simplest and easiest way to manage documentation and publish it to a target. Zensical generates actual files that can be published on a normal server, so when we are ready to host the documentation on https://clogpower.com, we can make the switch at any time.
+
+## Worfklow
+
+My initial thoughts are as follows:
+
+OPTION 1 - Direct editing of the *.md files using the Github web interface. The lowest friction option.
+
+OPTION 2 - Normal local repo and use Zensical + an editor to edit *.md files so contributors have a live preview of their changes locally before a pull request.
+
+I dont think we need staging areas or anything like that for now. I will keep on building out the *Documentation Quickstart* section so users have clear instructions on how to collaborate with the documentation project should they want to, including setting up Zensical localy, using it and suggestions on workflow for users.
 
 
-STATUS: Nov 23, 2025
-* Evaluating / testing documentation frameworks and approaches (presentation matters)
-* Working on code examples that illustrate CLOG develooment patterns
+## Pros and Cons 
 
-STATUS: Nov 27, 2025
-* Current top candidata is MkDocs with the Material theme: https://squidfunk.github.io/mkdocs-material/
-* Looking for: As few markup features as possible and no fewer, nice layout, ease of deployment of system on client platforms.
-* Long term goal: Support minimum amount of markdown on the github repo that can eventually be imported into a CLOG based wiki (already under development).
-* Still need to do a bit of testing against Retext and other options.
+There are all kinds of pros and cons with hosting documentation on Github pages. On the one hand, it's free, easy and automated, on the other using video is a problem as you can only use video embedded into pages using the Github web interface.
 
-STATUS: Dec 01, 2025
-* Mkdocs + Material is probably the best choice.
-* Right now "mkdoc serve" has a bug that does not allow for a served document to be automatically updated, this will cause anyone wanting to help great frustration
-* The issue is with the latest "click" package that pip installs, as per: https://github.com/squidfunk/mkdocs-material/issues/8478
-* The temp workaround is "mkdocs serve --livereload"
-* This should be fixed soon. Setting up initial doc structure for testing locally now. Looking to make it look nice by default so users can just add docs just by adding some markdown.
+One day we will host this on CLOG servers, but for now this is probably sufficient. When https://clogpower.com is updated, we can just link directly to the Gihub Pages as official documentation for now.
 
-STATUS: Dec 01, 2025
-* Frist mockup MkDocs markdown collection of pages for look and feel testing is done.
-* First MKDOCS --> GITHUB REPO --> GITHUB ACTIONS --> GITHUB PAGES automated deployment tested successfully.
-* Conclusion: Users can write documentation using MkDocs tooling or using Githubs web interface. On commit to main branch an action is run and public website is automatically updated on Github Pages. Hosting the documentation on Github Pages is the simplest possible solution and it supports custom domains so if Rabbi Botton would like to setup https://docs.clogpower.com, we can get nice integration. We will need a set of tutorials dedicated just to the use of MkDocs based workflows on different platforms, in addition to all of the tutorials for Clog.
-* Next Steps: Iterate through a few more test layouts, colour schemes etc, mockup a demo of the documenation for Rabbit Botton to approve before we begin the first set of tutorials.
 
-STATUS: Dec 07, 2025
-* Creating the first tutorial to test out markdown presentation capabilities.
-* If this looks good, we will present documentation (with sample content only!) shortly.
+## Special Note
 
-STATUS: Dec 08, 2025
-* I have uploaded a test repo for review: https://github.com/aykaramba/test4
-* It publishes the site after each commit using Github actions here: https://aykaramba.github.io/test4/
-* Created a cheat sheet for MkDocs + Material to demo the system, you can see it here: https://aykaramba.github.io/test4/doc-cheat-sheet/
-* All other sections are place holders.
-* Special features: relatively easy to use, minimal markup with maximum power, Github compatible, Github actions compatible.
-* Next steps: fix up the theme colors to be CLOG official brand colors, have a conversation with Rabbi Botton about any changes or preferences he wants to see applied, then start building out the first Clog tutorial.
-* Rabbi, please take a look and give me your initial thoughts.
+Please take a look at the *Documentation Quickstart* section. It is the most complete. It includes default documents provided by the system to get editors up and running quickly with markdown and information about the documentation project, goals and so forth. That will give you a good sense of what ***REAL*** documentation would look like if it had actual content.
 
-STATUS: Dec 12, 2025
-* I am busy this week.
-* I did managed to test Zensical. There will be positive updates over the weekend.
+The documentation website STRUCTURE is the actual structure that I would like to see for the site, although it isn't set in stone and we can move things around and merge some of the main tabs at the top. The rest of the content on the site is mostly either placeholder documents that need to be created or a copy / paste of existing documentation from the CLOG repo that needs to be edited and put in the correct part of the new CLOG manual. However, the actual menu and section structure is what I am proposing that we consider building out as best as we can. I think we should just go live with this skeleton configuration and just build it out day by day, page by page.
 
-STATUS: Dec 18, 2025
-* Work has slown down, I have an external issue to pay attention to, will resolve shortly.
-* Additional testing was done: Zensical is the superior replacement product but it is too young to have everyone easily collaborate (bug on Windows). MkDocs is compatible with Zensical and we will just use the default Material theme.
+Feel free to drill down as far as you want and to comment with as much detail as you like.  The more detail the better.
 
-STATUS: Jan 05, 2026
-* I am back working on the documentation. More updates this week.
 
-STATUS: Feb 22, 2026
-I have a sample documentation system up and running for you to review. Here is what you need to know:
-1. Everything is here: https://github.com/aykaramba/test01
-2. I have provided all of the information that you need in the README.md in the repo.
-3. I have ACTION items for you at the bottom of the README.
-Let me know if you have any questions or concerns. I will be watching my Github notifications.
+# ACTION ITEMS
 
-Test
+Rabbi Botton, I need the following:
 
-aaa
+1. Please review all of the above and provide feedback in the discussion forum for the repo here: https://github.com/aykaramba/test01/discussions
+2. If you want to have a web conference and meet to discuss any concerns or issues, happy to make my self available. Let me know if you want to chat.
+3. Ultimately, I need your approval to go live with this documentation skeleton. I want to push it to your official repo, keep on tweaking it until everyone is happy and then make some announcements to the community.
+
+I look forward to your feedback.
+
+Thanks!
