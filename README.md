@@ -4,9 +4,12 @@
 </p>
 
 
-
-
-
+<h4>
+  <p align="center">
+The Common Lisp Omnificent GUI
+  </p>
+</h4>
+  
 <h3><p align="center">PRODUCTION READY • BSD LICENSED </p></h3>
 
 <h1> <p align="center">Build anything in pure Common Lisp.</p></h1>
